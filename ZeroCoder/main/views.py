@@ -1,11 +1,9 @@
 from django.shortcuts import render
-
-# Create your views here.
-from django.http import HttpResponse
-
 def index(request):
-    return HttpResponse("<h1>Это мой первый проект на Django</h1>")
-def data(request):
-    return HttpResponse("<h1>Это мои данные</h1>")
-def test(request):
-    return HttpResponse("<h1>Проверка</h1>")
+    return render(request, 'main/index.html')
+def page2(request):
+    return render(request, 'main/page2.html')
+def page3(request):
+    return render(request, 'main/page3.html')
+def page4(request):
+    return render(request, 'main/page4.html')
